@@ -4,14 +4,14 @@
             <IconTabBar id="idIconTabBarNoIcons" expanded="{device>/isNoPhone}" class="sapUiResponsiveContentPadding">
                 <items>
                     <IconTabFilter id="adres" text="Adres" key="info">
-                       <core:Fragment fragmentName ="noktasisorgulama.tuketici.fragments.adres" type ="XML"/>
-                     </IconTabFilter>
+                        <core:Fragment fragmentName="noktasisorgulama.tuketici.fragments.adres" type="XML" />
+                    </IconTabFilter>
 
                     <IconTabFilter text="Bağlantı Nesnesi" key="attachments">
-                    <core:Fragment fragmentName="noktasisorgulama.tuketici.fragments.baglantinesnesi" type ="XML" />
+                        <core:Fragment fragmentName="noktasisorgulama.tuketici.fragments.baglantinesnesi" type="XML" />
                     </IconTabFilter>
                     <IconTabFilter text="Sayaç No" key="notes">
-                    <core:Fragment fragmentName ="noktasisorgulama.tuketici.fragments.sayacno" type ="XML" />
+                        <core:Fragment fragmentName="noktasisorgulama.tuketici.fragments.sayacno" type="XML" />
                     </IconTabFilter>
                 </items>
             </IconTabBar>

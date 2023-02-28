@@ -1,4 +1,4 @@
-<c:FragmentDefinition xmlns="sap.m" xmlns:c="sap.ui.core" xmlns:fb="sap.ui.comp.filterbar">
+<c:FragmentDefinition xmlns="sap.m" xmlns:c="sap.ui.core" xmlns:fb="sap.ui.comp.filterbar" >
     <fb:FilterBar showClearOnFB="true" id="filterbar" persistencyKey="myPersKey" useToolbar="false" search=".onSearch" filterChange=".onFilterChange" afterVariantLoad=".onAfterVariantLoad">
         <fb:filterItems>
             <fb:FilterItem name="il" label="İl">
@@ -28,4 +28,5 @@
             </fb:FilterItem>
         </fb:filterItems>
     </fb:FilterBar>
+
 </c:FragmentDefinition>
