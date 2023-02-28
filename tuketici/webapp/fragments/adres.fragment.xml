@@ -1,0 +1,31 @@
+<c:FragmentDefinition xmlns="sap.m" xmlns:c="sap.ui.core" xmlns:fb="sap.ui.comp.filterbar">
+    <fb:FilterBar showClearOnFB="true" id="filterbar" persistencyKey="myPersKey" useToolbar="false" search=".onSearch" filterChange=".onFilterChange" afterVariantLoad=".onAfterVariantLoad">
+        <fb:filterItems>
+            <fb:FilterItem name="il" label="İl">
+                <fb:control>
+                    <MultiComboBox selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="" placeholder="İli Giriniz." />
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem name="ilce" label="İlçe">
+                <fb:control>
+                    <MultiComboBox selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="" placeholder="İlçe Giriniz." />
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem name="mahalle" label="Mahalle">
+                <fb:control>
+                    <MultiComboBox selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="" placeholder="Mahalle Giriniz." />
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem name="sokak" label="Sokak">
+                <fb:control>
+                    <MultiComboBox selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="" placeholder="Sokak Giriniz." />
+                </fb:control>
+            </fb:FilterItem>
+            <fb:FilterItem name="binano" label="BinaNo">
+                <fb:control>
+                    <MultiComboBox selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="" placeholder="Bina No Giriniz." />
+                </fb:control>
+            </fb:FilterItem>
+        </fb:filterItems>
+    </fb:FilterBar>
+</c:FragmentDefinition>
