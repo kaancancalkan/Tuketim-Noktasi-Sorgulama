@@ -1,26 +1,30 @@
-<mvc:View controllerName="noktasisorgulama.tuketici.controller.Main"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
+<mvc:View controllerName="noktasisorgulama.tuketici.controller.Main" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
-        <content >
-        	<IconTabBar
-		id="idIconTabBarNoIcons"
-		expanded="{device>/isNoPhone}"
-		class="sapUiResponsiveContentPadding"
-        >
-		<items>
-			<IconTabFilter text="Adres" key="info">
-				<Text text="Info content goes here ..." />
-			</IconTabFilter>
-			<IconTabFilter text="Bağlantı Nesnesi" key="attachments">
-				<Text text="Attachments go here ..." />
-			</IconTabFilter>
-			<IconTabFilter text="Sayaç No" key="notes">
-				<Text text="Notes go here ..." />
-			</IconTabFilter>
-			
-		</items>
-	</IconTabBar>
+        <content>
+            <IconTabBar id="idIconTabBarNoIcons" expanded="{device>/isNoPhone}" class="sapUiResponsiveContentPadding">
+                <items>
+                 
+                    <IconTabFilter id="adres" text="Adres" key="info">
+                    <HBox
+                    >
+                        
+                         <Label class="sapUiTinyMarginTop"  design="Standard" displayOnly="false" required="false" text="Deneme" textAlign="Begin" textDirection="Inherit" vAlign="Inherit"  wrapping="false" wrappingType="Normal" />
+                        <MultiComboBox class="sapUiTinyMarginBegin" selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="" />
+                        
+                    </HBox>
+                    
+                  
+                       
+                    </IconTabFilter>
+
+                    <IconTabFilter text="Bağlantı Nesnesi" key="attachments">
+                        <Text text="Attachments go here ..." />
+                    </IconTabFilter>
+                    <IconTabFilter text="Sayaç No" key="notes">
+                        <Text text="Notes go here ..." />
+                    </IconTabFilter>
+                </items>
+            </IconTabBar>
         </content>
     </Page>
 </mvc:View>
