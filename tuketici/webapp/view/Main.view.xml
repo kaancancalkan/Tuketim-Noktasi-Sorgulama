@@ -1,0 +1,26 @@
+<mvc:View controllerName="noktasisorgulama.tuketici.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content >
+        	<IconTabBar
+		id="idIconTabBarNoIcons"
+		expanded="{device>/isNoPhone}"
+		class="sapUiResponsiveContentPadding"
+        >
+		<items>
+			<IconTabFilter text="Adres" key="info">
+				<Text text="Info content goes here ..." />
+			</IconTabFilter>
+			<IconTabFilter text="Bağlantı Nesnesi" key="attachments">
+				<Text text="Attachments go here ..." />
+			</IconTabFilter>
+			<IconTabFilter text="Sayaç No" key="notes">
+				<Text text="Notes go here ..." />
+			</IconTabFilter>
+			
+		</items>
+	</IconTabBar>
+        </content>
+    </Page>
+</mvc:View>
