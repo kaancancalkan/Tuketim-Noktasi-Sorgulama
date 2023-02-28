@@ -1,17 +1,52 @@
-<mvc:View controllerName="noktasisorgulama.tuketici.controller.Main" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+<mvc:View controllerName="noktasisorgulama.tuketici.controller.Main" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" 	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core"
+    xmlns:fb="sap.ui.comp.filterbar"
+    	xmlns:m="sap.m">
+
     <Page id="page" title="{i18n>title}">
         <content>
-            <IconTabBar id="idIconTabBarNoIcons" expanded="{device>/isNoPhone}" class="sapUiResponsiveContentPadding">
+        	
+		
+				  <IconTabBar id="idIconTabBarNoIcons" expanded="{device>/isNoPhone}" class="sapUiResponsiveContentPadding">
                 <items>
                  
                     <IconTabFilter id="adres" text="Adres" key="info">
-                    <HBox
-                    >
+                    <fb:FilterBar showClearOnFB="true" id="filterbar" persistencyKey="myPersKey" useToolbar="false" search=".onSearch" filterChange=".onFilterChange" afterVariantLoad=".onAfterVariantLoad">
+                        <fb:filterItems>
+                            <fb:FilterItem name="il" label="İl">
+                                <fb:control>
+                                  <MultiComboBox  selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="" placeholder="İli Giriniz." />
+                                </fb:control>
+                            </fb:FilterItem>
+                            <fb:FilterItem name="ilce" label="İlçe">
+                                <fb:control>
+                                  <MultiComboBox  selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="" placeholder="İlçe Giriniz." />
+                                </fb:control>
+                            </fb:FilterItem>
+                             <fb:FilterItem name="mahalle" label="Mahalle">
+                                <fb:control>
+                                  <MultiComboBox  selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="" placeholder="Mahalle Giriniz." />
+                                </fb:control>
+                            </fb:FilterItem>
+                              <fb:FilterItem name="sokak" label="Sokak">
+                                <fb:control>
+                                  <MultiComboBox  selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="" placeholder="Sokak Giriniz." />
+                                </fb:control>
+                            </fb:FilterItem>
+                              <fb:FilterItem name="binano" label="BinaNo">
+                                <fb:control>
+                                  <MultiComboBox  selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="" placeholder="Bina No Giriniz." />
+                                </fb:control>
+                            </fb:FilterItem>
+                            
+
+                        </fb:filterItems>
+                    </fb:FilterBar>
+                  
+                              
                         
-                         <Label class="sapUiTinyMarginTop"  design="Standard" displayOnly="false" required="false" text="Deneme" textAlign="Begin" textDirection="Inherit" vAlign="Inherit"  wrapping="false" wrappingType="Normal" />
-                        <MultiComboBox class="sapUiTinyMarginBegin" selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="" />
-                        
-                    </HBox>
+                    
                     
                   
                        
@@ -25,6 +60,9 @@
                     </IconTabFilter>
                 </items>
             </IconTabBar>
+			
+        
+          
         </content>
     </Page>
 </mvc:View>
