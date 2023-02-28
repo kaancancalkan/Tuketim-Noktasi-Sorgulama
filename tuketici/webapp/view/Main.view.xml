@@ -1,68 +1,64 @@
-<mvc:View controllerName="noktasisorgulama.tuketici.controller.Main" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" 	xmlns:l="sap.ui.layout"
-	xmlns:f="sap.ui.layout.form"
-	xmlns:core="sap.ui.core"
-    xmlns:fb="sap.ui.comp.filterbar"
-    	xmlns:m="sap.m">
-
+<mvc:View controllerName="noktasisorgulama.tuketici.controller.Main" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns:core="sap.ui.core" xmlns:fb="sap.ui.comp.filterbar" xmlns:m="sap.m">
     <Page id="page" title="{i18n>title}">
         <content>
-        	
-		
-				  <IconTabBar id="idIconTabBarNoIcons" expanded="{device>/isNoPhone}" class="sapUiResponsiveContentPadding">
+            <IconTabBar id="idIconTabBarNoIcons" expanded="{device>/isNoPhone}" class="sapUiResponsiveContentPadding">
                 <items>
-                 
                     <IconTabFilter id="adres" text="Adres" key="info">
-                    <fb:FilterBar showClearOnFB="true" id="filterbar" persistencyKey="myPersKey" useToolbar="false" search=".onSearch" filterChange=".onFilterChange" afterVariantLoad=".onAfterVariantLoad">
-                        <fb:filterItems>
-                            <fb:FilterItem name="il" label="İl">
-                                <fb:control>
-                                  <MultiComboBox  selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="" placeholder="İli Giriniz." />
-                                </fb:control>
-                            </fb:FilterItem>
-                            <fb:FilterItem name="ilce" label="İlçe">
-                                <fb:control>
-                                  <MultiComboBox  selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="" placeholder="İlçe Giriniz." />
-                                </fb:control>
-                            </fb:FilterItem>
-                             <fb:FilterItem name="mahalle" label="Mahalle">
-                                <fb:control>
-                                  <MultiComboBox  selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="" placeholder="Mahalle Giriniz." />
-                                </fb:control>
-                            </fb:FilterItem>
-                              <fb:FilterItem name="sokak" label="Sokak">
-                                <fb:control>
-                                  <MultiComboBox  selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="" placeholder="Sokak Giriniz." />
-                                </fb:control>
-                            </fb:FilterItem>
-                              <fb:FilterItem name="binano" label="BinaNo">
-                                <fb:control>
-                                  <MultiComboBox  selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="" placeholder="Bina No Giriniz." />
-                                </fb:control>
-                            </fb:FilterItem>
-                            
-
-                        </fb:filterItems>
-                    </fb:FilterBar>
-                  
-                              
-                        
-                    
-                    
-                  
-                       
+                        <fb:FilterBar showClearOnFB="true" id="filterbar" persistencyKey="myPersKey" useToolbar="false" search=".onSearch" filterChange=".onFilterChange" afterVariantLoad=".onAfterVariantLoad">
+                            <fb:filterItems>
+                                <fb:FilterItem name="il" label="İl">
+                                    <fb:control>
+                                        <MultiComboBox selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="" placeholder="İli Giriniz." />
+                                    </fb:control>
+                                </fb:FilterItem>
+                                <fb:FilterItem name="ilce" label="İlçe">
+                                    <fb:control>
+                                        <MultiComboBox selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="" placeholder="İlçe Giriniz." />
+                                    </fb:control>
+                                </fb:FilterItem>
+                                <fb:FilterItem name="mahalle" label="Mahalle">
+                                    <fb:control>
+                                        <MultiComboBox selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="" placeholder="Mahalle Giriniz." />
+                                    </fb:control>
+                                </fb:FilterItem>
+                                <fb:FilterItem name="sokak" label="Sokak">
+                                    <fb:control>
+                                        <MultiComboBox selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="" placeholder="Sokak Giriniz." />
+                                    </fb:control>
+                                </fb:FilterItem>
+                                <fb:FilterItem name="binano" label="BinaNo">
+                                    <fb:control>
+                                        <MultiComboBox selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="" placeholder="Bina No Giriniz." />
+                                    </fb:control>
+                                </fb:FilterItem>
+                            </fb:filterItems>
+                        </fb:FilterBar>
                     </IconTabFilter>
 
                     <IconTabFilter text="Bağlantı Nesnesi" key="attachments">
-                        <Text text="Attachments go here ..." />
+                        <fb:FilterBar showClearOnFB="true" id="filterbar2" persistencyKey="myPersKey" useToolbar="false" search=".onSearch" filterChange=".onFilterChange" afterVariantLoad=".onAfterVariantLoad">
+                            <fb:filterItems>
+                                <fb:FilterItem name="il" label="İl">
+                                    <fb:control>
+                                        <Input autocomplete="true" description="" placeholder="Bağlantı Nesnesini Giriniz" type="Text" />
+                                    </fb:control>
+                                </fb:FilterItem>
+                            </fb:filterItems>
+                        </fb:FilterBar>
                     </IconTabFilter>
                     <IconTabFilter text="Sayaç No" key="notes">
-                        <Text text="Notes go here ..." />
+                        <fb:FilterBar showClearOnFB="true" id="filterbar3" persistencyKey="myPersKey" useToolbar="false" search=".onSearch" filterChange=".onFilterChange" afterVariantLoad=".onAfterVariantLoad">
+                            <fb:filterItems>
+                                <fb:FilterItem name="il" label="İl">
+                                    <fb:control>
+                                        <Input autocomplete="true" description="" placeholder="Sayaç Noyu Giriniz" type="Text" />
+                                    </fb:control>
+                                </fb:FilterItem>
+                            </fb:filterItems>
+                        </fb:FilterBar>
                     </IconTabFilter>
                 </items>
             </IconTabBar>
-			
-        
-          
         </content>
     </Page>
 </mvc:View>
