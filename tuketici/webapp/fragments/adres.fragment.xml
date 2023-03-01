@@ -29,47 +29,28 @@
         </fb:filterItems>
     </fb:FilterBar>
 
-    	<Table
-        	id="table"
-				selectionMode="MultiToggle"
-				rows="{/ProductCollection}"
-				visibleRowCount="7"
-				sort="sortDeliveryDate"
-				ariaLabelledBy="title">
-				
-					<columns>
-                        <Column
-						id="name"
-						width="11rem"
-						sortProperty="Name">
-						<m:Label text="Product Name" />
-						
-							<m:Text text="Tüketim Noktası" wrapping="false" />
-						
-					</Column>
- <Column
-						id="name2"
-						width="11rem"
-						sortProperty="Name">
-						<m:Label text="Product Name" />
-						
-							<m:Text text="Oda" wrapping="false" />
-						
-					</Column>
-                     <Column
-						id="name3"
-						width="11rem"
-						sortProperty="Name">
-						<m:Label text="Product Name" />
-						
-							<m:Text text="Muhattap Adı Soyadı" wrapping="false" />
-						
-					</Column>
+    <Table id="table" selectionMode="MultiToggle" rows="{/ProductCollection}" visibleRowCount="7" sort="sortDeliveryDate" ariaLabelledBy="title">
+        <columns>
+            <Column id="name" width="11rem" sortProperty="Name">
+                <m:Label text="Product Name" />
 
-                    </columns>
-                    
-				
-				
-                </Table>
-                
+                <m:Text text="Bağlantı Nesnesi" wrapping="false" />
+            </Column>
+            <Column id="name2" width="11rem" sortProperty="Name">
+                <m:Label text="Product Name" />
+
+                <m:Text text="Tüketim Noktası" wrapping="false" />
+            </Column>
+            <Column id="name3" width="11rem" sortProperty="Name">
+                <m:Label text="Product Name" />
+
+                <m:Text text="Oda" wrapping="false" />
+            </Column>
+            <Column id="name4" width="11rem" sortProperty="Name">
+                <m:Label text="Product Name" />
+
+                <m:Text text="Muhattap Adı Soyadı" wrapping="false" />
+            </Column>
+        </columns>
+    </Table>
 </c:FragmentDefinition>

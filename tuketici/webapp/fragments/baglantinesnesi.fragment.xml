@@ -8,4 +8,5 @@
             </fb:FilterItem>
         </fb:filterItems>
     </fb:FilterBar>
+    
 </c:FragmentDefinition>

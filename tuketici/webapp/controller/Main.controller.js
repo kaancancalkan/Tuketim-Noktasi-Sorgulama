@@ -17,9 +17,9 @@ sap.ui.define([
 
         return Controller.extend("noktasisorgulama.tuketici.controller.Main", {
             onInit: function () {
-                var oJSONModel = this.initSampleDataModel();
-                var oView = this.getView();
-                oView.setModel(oJSONModel);
+                // var oJSONModel = this.initSampleDataModel();
+                // var oView = this.getView();
+                // oView.setModel(oJSONModel);
             }
         });
     });
