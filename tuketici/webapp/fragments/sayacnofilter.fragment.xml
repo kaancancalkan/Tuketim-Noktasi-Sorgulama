@@ -8,7 +8,7 @@
         <fb:filterItems>
             <fb:FilterItem name="il" label="İl">
                 <fb:control>
-                    <Input autocomplete="true" description="" placeholder="Sayaç Noyu Giriniz" type="Text" />
+                    <Input autocomplete="true" description="" placeholder="Sayaç Noyu Giriniz" type="Text"  required="true"/>
                 </fb:control>
             </fb:FilterItem>
         </fb:filterItems>

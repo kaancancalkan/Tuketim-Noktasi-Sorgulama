@@ -12,27 +12,27 @@
         <fb:filterItems>
             <fb:FilterItem name="il" label="İl">
                 <fb:control>
-                    <MultiComboBox selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="" placeholder="İli Giriniz." />
+                    <MultiComboBox selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="" placeholder="İli Giriniz." required="true" />
                 </fb:control>
             </fb:FilterItem>
             <fb:FilterItem name="ilce" label="İlçe">
                 <fb:control>
-                    <MultiComboBox selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="" placeholder="İlçe Giriniz." />
+                    <MultiComboBox selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="" placeholder="İlçe Giriniz." required="true" />
                 </fb:control>
             </fb:FilterItem>
             <fb:FilterItem name="mahalle" label="Mahalle">
                 <fb:control>
-                    <MultiComboBox selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="" placeholder="Mahalle Giriniz." />
+                    <MultiComboBox selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="" placeholder="Mahalle Giriniz." required="true" />
                 </fb:control>
             </fb:FilterItem>
             <fb:FilterItem name="sokak" label="Sokak">
                 <fb:control>
-                    <MultiComboBox selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="" placeholder="Sokak Giriniz." />
+                    <MultiComboBox selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="" placeholder="Sokak Giriniz." required="true" />
                 </fb:control>
             </fb:FilterItem>
             <fb:FilterItem name="binano" label="BinaNo">
                 <fb:control>
-                    <MultiComboBox selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="" placeholder="Bina No Giriniz." />
+                    <MultiComboBox selectionChange="handleSelectionChange" selectionFinish="handleSelectionFinish" width="" placeholder="Bina No Giriniz." required="true" />
                 </fb:control>
             </fb:FilterItem>
         </fb:filterItems>
