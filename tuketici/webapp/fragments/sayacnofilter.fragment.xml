@@ -1,0 +1,17 @@
+<c:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:c="sap.ui.core"
+     xmlns:fb="sap.ui.comp.filterbar"
+>
+
+<fb:FilterBar showClearOnFB="true" id="filterbar3" persistencyKey="myPersKey" useToolbar="false" search=".onSearch" filterChange=".onFilterChange" afterVariantLoad=".onAfterVariantLoad">
+        <fb:filterItems>
+            <fb:FilterItem name="il" label="İl">
+                <fb:control>
+                    <Input autocomplete="true" description="" placeholder="Sayaç Noyu Giriniz" type="Text" />
+                </fb:control>
+            </fb:FilterItem>
+        </fb:filterItems>
+    </fb:FilterBar>
+
+</c:FragmentDefinition>

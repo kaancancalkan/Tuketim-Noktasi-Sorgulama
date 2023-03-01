@@ -1,32 +1,75 @@
-<c:FragmentDefinition xmlns="sap.m" xmlns:c="sap.ui.core" xmlns:fb="sap.ui.comp.filterbar" xmlns:m="sap.m" xmlns:mvc="sap.ui.core.mvc"
+<c:FragmentDefinition xmlns="sap.ui.table" xmlns:c="sap.ui.core" xmlns:fb="sap.ui.comp.filterbar" xmlns:m="sap.m" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" 
 	xmlns:u="sap.ui.unified">
-    <fb:FilterBar showClearOnFB="true" id="filterbar3" persistencyKey="myPersKey" useToolbar="false" search=".onSearch" filterChange=".onFilterChange" afterVariantLoad=".onAfterVariantLoad">
-        <fb:filterItems>
-            <fb:FilterItem name="il" label="İl">
-                <fb:control>
-                    <Input autocomplete="true" description="" placeholder="Sayaç Noyu Giriniz" type="Text" />
-                </fb:control>
-            </fb:FilterItem>
-        </fb:filterItems>
-    </fb:FilterBar>
 
-        <Table id="table3" selectionMode="MultiToggle" rows="{/ProductCollection}" visibleRowCount="7" sort="sortDeliveryDate" ariaLabelledBy="title">
-        <columns>
-            <Column id="name8" width="11rem" sortProperty="Name">
-                <m:Label text="Product Name" />
+    <core:Fragment fragmentName="noktasisorgulama.tuketici.fragments.sayacnofilter" type="XML" />
 
-                <m:Text text="Bağlantı Nesnesi" wrapping="false" />
-            </Column>
-            <Column id="name9" width="11rem" sortProperty="Name">
-                <m:Label text="Product Name" />
-
-                <m:Text text="Tüketim Noktası" wrapping="false" />
-            </Column>
-            <Column id="name10" width="11rem" sortProperty="Name">
-                <m:Label text="Oda" />
-
-                <m:Text text="Muhattap Adı Soyadı" wrapping="false" />
-            </Column>
-        </columns>
-    </Table>
+   	<Table
+				id="table3"
+				selectionMode="MultiToggle"
+				rows="{/ProductCollection}"
+				visibleRowCount="7"
+				sort="sortDeliveryDate"
+				ariaLabelledBy="title">
+				<extension>
+					<m:OverflowToolbar style="Clear">
+						<m:Title id="title" text="Tüketim Noktası Sorgulama"/>
+						<m:ToolbarSpacer/>
+						<m:Button
+							icon="sap-icon://sorting-ranking"
+							tooltip="Sort ascending across Categories and Name"
+							press="sortCategoriesAndName"/>
+						<m:Button
+							icon="sap-icon://sort"
+							tooltip="Sort Categories in addition to current sorting"
+							press="sortCategories"/>
+						<m:Button
+							icon="sap-icon://decline"
+							tooltip="Clear all sortings"
+							press="clearAllSortings"/>
+					</m:OverflowToolbar>
+				</extension>
+				<columns>
+					<Column
+						id="name3"
+						width="11rem"
+						sortProperty="Name">
+						<m:Label text="Bağlantı Nesnesi" />
+						<template>
+							<m:Text text="{Name}" wrapping="false" />
+						</template>
+					</Column>
+					<Column
+						id="quantity7"
+						width="9rem"
+					
+						sortProperty="Quantity">
+						<m:Label text="Tüketim Noktası" />
+						<template>
+							<m:Label text="{
+								path: 'Quantity',
+								type: 'sap.ui.model.type.Integer'
+							}" />
+						</template>
+					</Column>
+					
+					<Column
+						id="quantity3"
+						width="6rem"
+					
+						sortProperty="Quantity">
+						<m:Label text="Oda" />
+						<template>
+							<m:Label text="{
+								path: 'Quantity',
+								type: 'sap.ui.model.type.Integer'
+							}" />
+						</template>
+					</Column>
+					
+				</columns>
+				<footer>
+					<m:OverflowToolbar id="infobar3"></m:OverflowToolbar>
+				</footer>
+			</Table>
+        
 </c:FragmentDefinition>
