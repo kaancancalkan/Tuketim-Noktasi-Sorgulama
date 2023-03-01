@@ -1,4 +1,4 @@
-<c:FragmentDefinition xmlns="sap.m" xmlns:c="sap.ui.core" xmlns:fb="sap.ui.comp.filterbar">
+<c:FragmentDefinition xmlns="sap.m" xmlns:c="sap.ui.core" xmlns:fb="sap.ui.comp.filterbar" xmlns:m="sap.m">
     <fb:FilterBar showClearOnFB="true" id="filterbar3" persistencyKey="myPersKey" useToolbar="false" search=".onSearch" filterChange=".onFilterChange" afterVariantLoad=".onAfterVariantLoad">
         <fb:filterItems>
             <fb:FilterItem name="il" label="İl">
@@ -8,4 +8,24 @@
             </fb:FilterItem>
         </fb:filterItems>
     </fb:FilterBar>
+
+        <Table id="table3" selectionMode="MultiToggle" rows="{/ProductCollection}" visibleRowCount="7" sort="sortDeliveryDate" ariaLabelledBy="title">
+        <columns>
+            <Column id="name8" width="11rem" sortProperty="Name">
+                <m:Label text="Product Name" />
+
+                <m:Text text="Bağlantı Nesnesi" wrapping="false" />
+            </Column>
+            <Column id="name9" width="11rem" sortProperty="Name">
+                <m:Label text="Product Name" />
+
+                <m:Text text="Tüketim Noktası" wrapping="false" />
+            </Column>
+            <Column id="name10" width="11rem" sortProperty="Name">
+                <m:Label text="Oda" />
+
+                <m:Text text="Muhattap Adı Soyadı" wrapping="false" />
+            </Column>
+        </columns>
+    </Table>
 </c:FragmentDefinition>
